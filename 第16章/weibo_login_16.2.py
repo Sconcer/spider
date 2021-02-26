@@ -12,6 +12,8 @@ def get_server_data(su):
     pre_data_res = session.get(prelogin_url, headers=headers, proxies=proxies)
     # 将响应内容转换字典格式
     sever_data = eval(pre_data_res.content.decode("utf-8").replace("sinaSSOController.preloginCallBack", ''))
+    print(sever_data)
+    print('aaaa')
     return sever_data
 
 # 账号加密
@@ -98,7 +100,7 @@ def login(username, password):
 
 if __name__ == "__main__":
     # 构造请求头
-    agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0'
+    agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36'
     headers = {
         'User-Agent': agent
     }
@@ -106,4 +108,4 @@ if __name__ == "__main__":
     proxies = {}
     # 新建会话
     session = requests.session()
-    user_info = login('13435423143','xxxxx')
+    user_info = login('18352969086','r4646882')
